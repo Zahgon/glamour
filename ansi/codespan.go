@@ -10,6 +10,6 @@ type CodeSpanElement struct {
 
 // Render renders a CodeSpanElement.
 func (e *CodeSpanElement) Render(w io.Writer, _ RenderContext) error {
-	_, _ = renderText(w, e.Style, e.Style.Prefix+e.Text+e.Style.Suffix)
+	_ = "STUB: not implemented"
 	return nil
 }

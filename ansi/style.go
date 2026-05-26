@@ -137,116 +137,19 @@ type StyleConfig struct {
 	HTMLSpan  StyleBlock `json:"html_span,omitempty"`
 }
 
-func cascadeStyles(s ...StyleBlock) StyleBlock {
-	var r StyleBlock
-	for _, v := range s {
-		r = cascadeStyle(r, v, true)
-	}
-	return r
-}
+func cascadeStyles(s ...StyleBlock) StyleBlock { _ = "STUB: not implemented"; return *new(StyleBlock) }
 
 func cascadeStylePrimitives(s ...StylePrimitive) StylePrimitive {
-	var r StylePrimitive
-	for _, v := range s {
-		r = cascadeStylePrimitive(r, v, true)
-	}
-	return r
+	_ = "STUB: not implemented"
+	return *new(StylePrimitive)
 }
 
 func cascadeStylePrimitive(parent, child StylePrimitive, toBlock bool) StylePrimitive {
-	s := child
-
-	s.Color = parent.Color
-	s.BackgroundColor = parent.BackgroundColor
-	s.Underline = parent.Underline
-	s.Bold = parent.Bold
-	s.Upper = parent.Upper
-	s.Title = parent.Title
-	s.Lower = parent.Lower
-	s.Italic = parent.Italic
-	s.CrossedOut = parent.CrossedOut
-	s.Faint = parent.Faint
-	s.Conceal = parent.Conceal
-	s.Inverse = parent.Inverse
-	s.Blink = parent.Blink
-
-	if toBlock {
-		s.BlockPrefix = parent.BlockPrefix
-		s.BlockSuffix = parent.BlockSuffix
-		s.Prefix = parent.Prefix
-		s.Suffix = parent.Suffix
-	}
-
-	if child.Color != nil {
-		s.Color = child.Color
-	}
-	if child.BackgroundColor != nil {
-		s.BackgroundColor = child.BackgroundColor
-	}
-	if child.Underline != nil {
-		s.Underline = child.Underline
-	}
-	if child.Bold != nil {
-		s.Bold = child.Bold
-	}
-	if child.Upper != nil {
-		s.Upper = child.Upper
-	}
-	if child.Lower != nil {
-		s.Lower = child.Lower
-	}
-	if child.Title != nil {
-		s.Title = child.Title
-	}
-	if child.Italic != nil {
-		s.Italic = child.Italic
-	}
-	if child.CrossedOut != nil {
-		s.CrossedOut = child.CrossedOut
-	}
-	if child.Faint != nil {
-		s.Faint = child.Faint
-	}
-	if child.Conceal != nil {
-		s.Conceal = child.Conceal
-	}
-	if child.Inverse != nil {
-		s.Inverse = child.Inverse
-	}
-	if child.Blink != nil {
-		s.Blink = child.Blink
-	}
-	if child.BlockPrefix != "" {
-		s.BlockPrefix = child.BlockPrefix
-	}
-	if child.BlockSuffix != "" {
-		s.BlockSuffix = child.BlockSuffix
-	}
-	if child.Prefix != "" {
-		s.Prefix = child.Prefix
-	}
-	if child.Suffix != "" {
-		s.Suffix = child.Suffix
-	}
-	if child.Format != "" {
-		s.Format = child.Format
-	}
-
-	return s
+	_ = "STUB: not implemented"
+	return *new(StylePrimitive)
 }
 
 func cascadeStyle(parent StyleBlock, child StyleBlock, toBlock bool) StyleBlock {
-	s := child
-	s.StylePrimitive = cascadeStylePrimitive(parent.StylePrimitive, child.StylePrimitive, toBlock)
-
-	if toBlock {
-		s.Indent = parent.Indent
-		s.Margin = parent.Margin
-	}
-
-	if child.Indent != nil {
-		s.Indent = child.Indent
-	}
-
-	return s
+	_ = "STUB: not implemented"
+	return *new(StyleBlock)
 }

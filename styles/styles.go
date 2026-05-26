@@ -675,6 +675,6 @@ var (
 	}
 )
 
-func boolPtr(b bool) *bool       { return &b }
-func stringPtr(s string) *string { return &s }
-func uintPtr(u uint) *uint       { return &u }
+func boolPtr(b bool) *bool       { _ = "STUB: not implemented"; return nil }
+func stringPtr(s string) *string { _ = "STUB: not implemented"; return nil }
+func uintPtr(u uint) *uint       { _ = "STUB: not implemented"; return nil }

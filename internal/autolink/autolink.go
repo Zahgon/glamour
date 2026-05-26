@@ -45,11 +45,4 @@ var patterns = []pattern{
 
 // Detect checks if the given URL matches any of the known patterns and
 // returns a human-readable formatted string if a match is found.
-func Detect(u string) (string, bool) {
-	for _, p := range patterns {
-		if m := p.pattern.FindStringSubmatch(u); len(m) > 0 {
-			return p.yield(m), true
-		}
-	}
-	return "", false
-}
+func Detect(u string) (string, bool) { _ = "STUB: not implemented"; return "", false }

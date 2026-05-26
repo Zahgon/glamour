@@ -1,38 +1,20 @@
 package main //nolint:revive
 
 import (
-	"encoding/json"
 	"fmt"
 	"os"
-	"path/filepath"
 
 	"charm.land/glamour/v2/ansi"
-	styles "charm.land/glamour/v2/styles"
 )
 
 func writeStyleJSON(filename string, styleConfig *ansi.StyleConfig) error {
-	f, err := os.Create(filename)
-	if err != nil {
-		return fmt.Errorf("glamour: error creating file: %w", err)
-	}
-	defer f.Close() //nolint: errcheck
-
-	e := json.NewEncoder(f)
-	e.SetIndent("", "  ")
-	if err := e.Encode(styleConfig); err != nil {
-		return fmt.Errorf("glamour: error encoding json: %w", err)
-	}
+	_ = "STUB: not implemented"
 	return nil
 }
 
-func run() error {
-	for style, styleConfig := range styles.DefaultStyles {
-		if err := writeStyleJSON(filepath.Join(style+".json"), styleConfig); err != nil {
-			return err
-		}
-	}
-	return nil
-}
+//nolint: errcheck
+
+func run() error { _ = "STUB: not implemented"; return nil }
 
 func main() {
 	if err := run(); err != nil {

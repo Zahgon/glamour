@@ -1,9 +1,6 @@
 package ansi
 
 import (
-	"html"
-	"strings"
-
 	"github.com/microcosm-cc/bluemonday"
 )
 
@@ -19,20 +16,12 @@ type RenderContext struct {
 
 // NewRenderContext returns a new RenderContext.
 func NewRenderContext(options Options) RenderContext {
-	return RenderContext{
-		options:    options,
-		blockStack: &BlockStack{},
-		table:      &TableElement{},
-		stripper:   bluemonday.StrictPolicy(),
-	}
+	_ = "STUB: not implemented"
+	return *new(RenderContext)
 }
 
 // SanitizeHTML sanitizes HTML content.
 func (ctx RenderContext) SanitizeHTML(s string, trimSpaces bool) string {
-	s = ctx.stripper.Sanitize(s)
-	if trimSpaces {
-		s = strings.TrimSpace(s)
-	}
-
-	return html.UnescapeString(s)
+	_ = "STUB: not implemented"
+	return ""
 }
